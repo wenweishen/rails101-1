@@ -19,4 +19,12 @@ ActiveRecord::Schema.define(version: 20170325091714) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "group_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end
